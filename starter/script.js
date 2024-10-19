@@ -14,3 +14,16 @@ score1El.textContent = 0;
 diceEl.classList.add('hidden');
 
 //rolling dice functionality
+
+btnRoll.addEventListener('click', function () {
+  //generating a random dice
+  const dice = Math.trunc(Math.random() * 6) + 1;
+  console.log(dice);
+
+  //display dice
+  diceEl.classList.remove('hidden');
+
+  diceEl.src = `dice-${dice}.png`;
+
+  //check for rolled dice... if true, switch to next player
+});
